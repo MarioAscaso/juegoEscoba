@@ -21,7 +21,7 @@ public class Main {
         OutputScreen.separator();
         OutputScreen.askNamePlayer1();
         String player1name = InputKeyboard.getStringValue();
-        player1.setName();
+        player1.setName(); // ❗ Da error de ejecución
         OutputScreen.askNamePlayer2();
         String player2name = InputKeyboard.getStringValue();
     }

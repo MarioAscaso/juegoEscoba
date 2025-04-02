@@ -3,7 +3,7 @@ package output;
 import card.SpanishCard;
 
 public class OutputScreen implements OutputInterface {
-
+    // Si usas interfaces, mejor crea instancias (no uses métodos de clase).
     private static final String format = "| %-126s |";
 
     public static void separator(){System.out.println("|--------------------------------------------------------------------------------------------------------------------------------| ");}

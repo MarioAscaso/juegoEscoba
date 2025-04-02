@@ -1,5 +1,7 @@
 package person;
 
+// Más que "Person", "Player" :)
+// No mezcles español con inglés: o español o inglés.
 public class Person {
 
     String name;
