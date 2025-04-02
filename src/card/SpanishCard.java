@@ -5,8 +5,10 @@ import java.util.List;
 
 public class SpanishCard {
 
-    private String suit;
+    private String suit; // Mejor como int
     private Integer value;
+    // No es la mejor estructura para almacenar la baraja.
+    // Ya sabes cuántas cartas tiene la baraja española: ¿un array estático mejor?
     private static final List<SpanishCard> deck = new ArrayList<>();
 
     private static final String[] suits = {"COINS", "WANDS", "SWORDS", "CUPS"};
@@ -27,10 +29,11 @@ public class SpanishCard {
         return value;
     }
 
+    // La carta NO gestiona la baraja (en todo caso es al revés)
     private void addCards() {
         if (deck.isEmpty()) {
-            for (String s : suits) {
-                for (int j : values) {
+            for (String s : suits) { // for (String suit : suits)
+                for (int j : values) { // for (int value: values)
                     deck.add(new SpanishCard(s, j));
                 }
             }
@@ -43,6 +46,7 @@ public class SpanishCard {
     }
 
     @Override
+    // Estamos acostumbrados a verlo como: "7 de oros" -> return value + " de " + suit;
     public String toString() {
         return suit + " - " + value;
     }
